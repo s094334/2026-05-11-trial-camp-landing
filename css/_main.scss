@@ -1,0 +1,489 @@
+@use "mixin" as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;1,300&display=swap');
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Noto Sans";
+}
+/* header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 32px 312px;
+	@include pad {
+        padding: 0;
+        position: relative;
+    }
+}
+@include pad {
+	header ::after{
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 0;
+        width: 40px;
+		height: 40px;
+        background: url('../assets/hamburger.svg') no-repeat;
+	}
+}
+header img, footer img {
+    width: 90px;
+    height: 40px;
+}
+.nav-list {
+    display: flex;
+    justify-content: center;
+	gap: 40px;
+	@include pad {
+        display: none;
+    }
+}
+.nav-list a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #000000;
+	font-size: 16px;
+}
+.nav-list a.active {
+	font-weight: bold;
+}
+/* 第一部分 */
+.hero {
+	display: flex;
+	@include pad {
+        flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+    }
+}
+.hero-content {
+	width: 40%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	@include pad {
+		width: 60%;
+    }
+}
+.hero-img {
+	width: 60%;
+	@include pad {
+        width: 100%;
+    }
+}
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	color: #3B3B3B;
+	padding-bottom: 24px;
+	@include pad {
+        font-size: 32px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+    }
+}
+.intro p {
+	font-size: 20px;
+	color: #5B5B5B;
+	line-height: 30px;
+	padding-bottom: 8px;
+}
+.intro p .highlight {
+	background-image: url('../assets/Vector.png');
+	background-repeat: no-repeat;
+	background-position: center bottom; /* 圖片位置在中央底部 */
+  	background-size: 100% auto; /* 橫向撐滿文字寬度 */
+    padding-bottom: 4px;        /* 確保底部有空間顯示圖片 */
+}
+.intro .specialties {
+	font-size: 16px;
+	color: #C1C1C1;
+	padding-top: 16px;
+	line-height: 24px;
+}
+.intro ul {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 16px;
+	padding-top: 60px;
+	@include pad {
+		justify-content: center;
+		padding-top: 24px;
+    }
+}
+.intro ul li {
+	width: 56px;
+	height: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.intro ul img {
+	width: 70%;
+}
+/* 第二部分 */
+.works {
+	padding-top: 80px;
+}
+h2 {
+    font-size: 32px;
+	font-weight: bold;
+    color: #3B3B3B;
+	@include pad {
+		font-size: 24px;
+    }
+}
+.portfolio {
+	height: 2400px;
+	display: flex;
+	flex-direction: column;
+	padding-top: 60px;
+	@include pad {
+		height: 2043px;
+    }
+}
+.portfolio-item-up {
+	flex: 1;
+	width: 100%;
+	background: url('../assets/portfolio-up.jpg') center/cover no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	@include pad {
+		flex-direction: column;
+		height: 390px;
+    }
+}
+.portfolio-item-up img {
+	width: 714px;
+	height: 720px;
+	align-self: flex-end;
+	@include pad {
+		width: 295px;
+		height: 297px;
+		align-self: center;
+		margin-top: auto;
+    }
+}
+.glass-card {
+	width: 526px;
+	height: 400px;
+	backdrop-filter: blur(8px);
+	border-radius: 24px;
+	background-color: #FFFFFF1A;
+	@include pad {
+        background-color: white;
+		width: 100%;
+		border-radius: 0;
+		height: 164px;
+    }
+}
+.portfolio-content {
+	color: #FFFFFF;
+	margin: 80px 40px 56px 40px;
+	@include pad {
+		margin: 0 auto;
+		color: #1E1E1E;
+		text-align: center;
+    }
+}
+h3 {
+	font-weight: bold;
+	font-size: 28px;
+	padding-bottom: 6px;
+	@include pad {
+		font-size: 20px;
+		padding-top: 24px;
+		padding-bottom: 0px;
+    }
+}
+.portfolio-content p {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	@include pad {
+		padding-top: 8px;
+		padding-bottom: 16px;
+		white-space: normal; /* pad 版允許換行 */
+        width: 100%;         /* 寬度撐滿讓文字有空間換行 */
+        text-align: center;
+    }
+}
+.portfolio-content ul {
+	display: flex;
+	gap: 16px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	@include pad {
+		font-size: 16px;
+		gap: 8px;
+		padding-top: 16px;
+		padding-bottom: 20px;
+		justify-content: center;
+		align-items: center;
+    }
+}
+.portfolio-content li {
+	color: #3B3B3B;
+	background: #FFFFFF;
+	padding: 10px 28px;
+	border-radius: 16px;
+	@include pad {
+		color: #3B3B3B;
+		background: #F1F1F1;
+		gap: 8px;
+		padding: 4px 12px;
+    }
+}
+.button {
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #000000;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 5px;
+	display: flex;
+    align-items: center;
+	text-align: center;
+    width: fit-content;  /* 寬度只包住文字 */
+    margin: 0 auto;
+	@include pad {
+		font-size: 16px;
+		padding: 8px 16px;
+    }
+}
+.portfolio-item-middle {
+	flex: 1;
+	width: 100%;
+	background: url('../assets/portfolio-middle.svg') center/cover no-repeat;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 32px;
+	@include pad {
+		flex-direction: column;
+		background: none;
+		gap: 24px;
+    }
+}
+.portfolio-middle-bg {
+    display: none; /* 桌機版隱藏 */
+	@include pad {
+        display: block;
+		height: 390px;
+		margin-top: 48px;
+	}
+}
+.portfolio-item-down {
+	flex: 1;
+	width: 100%;
+	background: url('../assets/portfolio-down.svg') center/cover no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+	@include pad {
+		flex-direction: column;
+		gap: 24px;
+		margin-top: 48px;
+    }
+}
+.portfolio-item-down img{
+	width: 721px;
+	height: 512px;
+	@include pad {
+		width: 295px;
+		height: 210px;
+		align-self: center;
+    }
+}
+/* 第三部分 - 服務項目 */
+.services-container {
+	width: 100%;
+	background: url('../assets/homepage-services-bg.svg') center/cover no-repeat;
+	height: 881px;
+	padding-top: 120px;
+	@include pad {
+        height: auto; /* 移除固定高度，讓內容撐開 */
+    }
+}
+.services-container ul {
+	padding-top: 90px;
+	display: flex;
+	gap: 24px;
+	justify-content: center;
+	align-items: center;
+	@include pad {
+		flex-direction: column;
+    }
+}
+.services-container li {
+	background: url('../assets/process-bg.svg') center/cover no-repeat;
+	color: #FFFFFF;
+	height: 306px;
+	width: 306px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 24px;
+	gap: 24px;
+}
+.services-container span, .cta p {
+	font-weight: bold;
+	font-size: 28px;
+	padding-bottom: 6px;
+}
+.cta {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	padding-top: 80px;
+}
+/* 第四部分 - 精選文章 */
+.articles {
+	padding-top: 120px;
+	padding-bottom: 80px;
+}
+.articles-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	padding-top: 80px;
+	@include pad {
+		flex-direction: column;
+    }
+}
+.article-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start; /* 頂端對齊 */
+	width: 416px;
+	gap: 16px;
+	@include pad {
+		padding-right: 12px;
+		padding-left: 12px;
+		width: 100%;
+    }
+}
+.article-card img {
+	@include pad {
+		width: 100%;
+    }
+}
+.article-card p {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: left; /* 強制靠左 */
+  	word-wrap: break-word; /* 允許長單字換行 */
+	width: 100%;
+	line-height: 1.5;
+}
+.article-meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 100%;
+}
+.label {
+	background-color: #F1F1F1;
+	color: #3B3B3B;
+	padding: 4px 12px;
+	font-size: 16px;
+	border-radius: 16px;
+}
+time {
+	font-size: 16px;
+	line-height: 24px;
+}
+.dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 40px;
+	gap: 16px;
+}
+/* footer */
+footer {
+	width: 100%;
+	background: url('../assets/footer-lg.png') center/cover no-repeat;
+	padding: 80px 312px;
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	@include pad {
+		padding-left: 12px;
+		padding-right: 12px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: url('../assets/footer-bg-sm.svg') center/cover no-repeat;
+    }
+}
+.footer-intro {
+	gap: 24px;
+	display: flex;
+	flex-direction: column;
+	width: 686px;
+	@include pad {
+		width: 100%;
+		align-items: center;
+    }
+}
+.footer-intro p {
+	font-size: 20px;
+	color: #3B3B3B;
+}
+.footer-intro address a {
+	color: #919191;
+	text-decoration: none;
+}
+.footer-contact {
+	gap: 24px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+.information-button {
+	width: 306px;
+	background-color: #FFFFFF;
+	color: #3B3B3B;
+	text-decoration: none;
+	border-radius: 8px;
+	font-size: 20px;
+	line-height: 30px;
+	cursor: pointer;
+	padding: 8px 24px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	@include pad {
+		border: #C1C1C1 1px solid;
+    }
+}
+.information-button.active {
+	background-color: #000000;
+	color: white;
+}
+.icon-wrapper{
+	width: 56px;
+	height: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden; /* 防止 img 溢出 */
+}
+.icon-lg {
+	width: 100%;
+	height: 100%;
+}

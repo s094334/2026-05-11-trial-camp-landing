@@ -1,0 +1,69 @@
+@use "mixin" as *;
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title::before, .title::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #C1C1C1;
+}
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+h2::before, h2::after {
+	content: '';
+    flex: 0 0 100px;
+    height: 1px;
+    background: #C1C1C1;
+    @include pad {
+		flex: 0 0 50px;
+    }
+}
+.portfolio-content::after {
+	content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+	background-color: #F1F1F1;
+    @include pad {
+		display: none;
+    }
+}
+.button::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url("../assets/arrow.svg");
+    background-repeat: no-repeat;
+    margin-left: 8px;
+}
+.grey-box {
+	background-color: rgba(128, 128, 128, 0.7);
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    @include pad {
+        background-color: white;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+.dots li span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E9E9E9;
+}
+.dots li.active span {
+    background-color: #000000;
+}
