@@ -55,6 +55,7 @@ h2::before, h2::after {
         background-color: white;
         flex-direction: column;
         width: 100%;
+        height: 188px;
     }
 }
 .dots li span {
@@ -63,6 +64,9 @@ h2::before, h2::after {
     height: 12px;
     border-radius: 50%;
     background-color: #E9E9E9;
+    @include pad {
+		display: none;
+    }
 }
 .dots li.active span {
     background-color: #000000;

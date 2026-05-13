@@ -118,6 +118,7 @@ h2::before, h2::after {
     background-color: white;
     flex-direction: column;
     width: 100%;
+    height: 188px;
   }
 }
 
@@ -127,6 +128,11 @@ h2::before, h2::after {
   height: 12px;
   border-radius: 50%;
   background-color: #E9E9E9;
+}
+@media (max-width: 768px) {
+  .dots li span {
+    display: none;
+  }
 }
 
 .dots li.active span {
@@ -314,6 +320,7 @@ h2 {
 @media (max-width: 768px) {
   .portfolio {
     height: 2043px;
+    padding-top: 40px;
   }
 }
 
@@ -329,21 +336,59 @@ h2 {
 @media (max-width: 768px) {
   .portfolio-item-up {
     flex-direction: column;
+    background: none;
+  }
+}
+
+.portfolio-up-mobile-box {
+  display: none;
+}
+@media (max-width: 768px) {
+  .portfolio-up-mobile-box {
+    position: relative;
+  }
+}
+
+.portfolio-up-mobile-wrapper, .portfolio-down-mobile-wrapper {
+  display: none;
+}
+@media (max-width: 768px) {
+  .portfolio-up-mobile-wrapper, .portfolio-down-mobile-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
     height: 390px;
   }
 }
 
-.portfolio-item-up img {
+@media (max-width: 768px) {
+  .portfolio-up-bg-mobile, .portfolio-down-bg-mobile {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.portfolio-up-img-web {
   width: 714px;
   height: 720px;
   align-self: flex-end;
 }
 @media (max-width: 768px) {
-  .portfolio-item-up img {
+  .portfolio-up-img-web {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-up-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 295px;
     height: 297px;
-    align-self: center;
-    margin-top: auto;
   }
 }
 
@@ -454,6 +499,7 @@ h3 {
   .button {
     font-size: 16px;
     padding: 8px 16px;
+    height: 40px;
   }
 }
 
@@ -470,18 +516,18 @@ h3 {
   .portfolio-item-middle {
     flex-direction: column;
     background: none;
-    gap: 24px;
+    flex: 0;
   }
 }
 
-.portfolio-middle-bg {
+.portfolio-middle-bg-mobile {
   display: none; /* 桌機版隱藏 */
 }
 @media (max-width: 768px) {
-  .portfolio-middle-bg {
+  .portfolio-middle-bg-mobile {
     display: block;
+    width: 100%;
     height: 390px;
-    margin-top: 48px;
   }
 }
 
@@ -497,20 +543,28 @@ h3 {
 @media (max-width: 768px) {
   .portfolio-item-down {
     flex-direction: column;
-    gap: 24px;
-    margin-top: 48px;
+    background: none;
   }
 }
 
-.portfolio-item-down img {
+@media (max-width: 768px) {
+  .portfolio-down-img {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 295px;
+    height: 320px;
+  }
+}
+
+.portfolio-down-img-web {
   width: 721px;
   height: 512px;
 }
 @media (max-width: 768px) {
-  .portfolio-item-down img {
-    width: 295px;
-    height: 210px;
-    align-self: center;
+  .portfolio-down-img-web {
+    display: none;
   }
 }
 
@@ -518,12 +572,13 @@ h3 {
 .services-container {
   width: 100%;
   background: url("../assets/homepage-services-bg.svg") center/cover no-repeat;
-  height: 881px;
   padding-top: 120px;
+  padding-bottom: 120px;
 }
 @media (max-width: 768px) {
   .services-container {
-    height: auto; /* 移除固定高度，讓內容撐開 */
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
 
@@ -536,6 +591,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .services-container ul {
+    padding-top: 40px;
     flex-direction: column;
   }
 }
@@ -553,10 +609,26 @@ h3 {
   gap: 24px;
 }
 
-.services-container span, .cta p {
+.services-container span {
   font-weight: bold;
   font-size: 28px;
   padding-bottom: 6px;
+}
+@media (max-width: 768px) {
+  .services-container span {
+    font-size: 24px;
+  }
+}
+
+.cta p {
+  font-weight: bold;
+  font-size: 28px;
+  padding-bottom: 6px;
+}
+@media (max-width: 768px) {
+  .cta p {
+    font-size: 20px;
+  }
 }
 
 .cta {
@@ -567,11 +639,21 @@ h3 {
   gap: 40px;
   padding-top: 80px;
 }
+@media (max-width: 768px) {
+  .cta {
+    padding-top: 40px;
+  }
+}
 
 /* 第四部分 - 精選文章 */
 .articles {
   padding-top: 120px;
   padding-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .articles {
+    padding-top: 80px;
+  }
 }
 
 .articles-content {
@@ -644,6 +726,15 @@ time {
   align-items: center;
   padding-top: 40px;
   gap: 16px;
+}
+
+.articles .button {
+  display: none;
+}
+@media (max-width: 768px) {
+  .articles .button {
+    display: flex;
+  }
 }
 
 /* footer */
