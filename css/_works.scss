@@ -98,7 +98,9 @@
     background: #C1C1C1;
 }
 .works-collection {
-    padding: 120px 312px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 12px;
     @include pad {
 		padding: 80px 12px;
     }
