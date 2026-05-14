@@ -1,0 +1,275 @@
+@use "mixin" as *;
+.works-hero {
+    width: 100%;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include pad {
+		padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.works-intro {
+    gap: 16px;
+    width: 670px;
+    height: 192px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include pad {
+		width: 100%;
+        padding-left: 37.5px;
+        padding-right: 37.5px;
+        padding-top: 64px;
+    }
+}
+.works-intro p {
+    font-size: 24px;
+	text-align: center;
+    @include pad {
+		font-size: 20px;
+        line-height: 1.6;
+    }
+}
+.quote-left {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 0;
+    left: 0;
+    @include pad {
+		left: 50%;
+        transform: translateX(-50%);
+        width: 64px;
+        height: 64px;
+    }
+}
+.quote-right {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    bottom: 0;
+    right: 0;
+    @include pad {
+		display: none;
+    }
+}
+.works-intro .highlight {
+    background-image: url('../assets/Vector.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+    background-size: 100% auto;
+    padding-bottom: 4px;
+}
+.work-experience {
+    display: flex;
+    justify-content: center;
+    width: 636px;
+    gap: 40px;
+    @include pad {
+        width: 235px;
+		flex-direction: column;
+        padding-top: 40px;
+    }
+}
+.works-experience-card p {
+    color: #3B3B3B;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+.works-experience-card .subtitle {
+    color: #5B5B5B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.works-experience-card .subtitle::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #C1C1C1;
+}
+.works-collection {
+    max-width: 1280px;
+    margin: 0 auto;
+    @include pad {
+		padding: 80px 12px;
+    }
+}
+.works-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    @include pad {
+		grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
+.works-item img {
+    width: 100%;
+    border: #F1F1F1 1px solid;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.works-item h3 {
+    font-size: 28px;
+    color: #3B3B3B;
+    padding-bottom: 8px;
+    padding-top: 0;
+    @include pad {
+		font-size: 20px;
+        padding-left: 16px;
+    }
+}
+.works-item p {
+    font-size: 16px;
+    color: #919191;
+    @include pad {
+        padding-left: 16px;
+    }
+}
+.works-item ul {
+    font-size: 16px;
+	display: flex;
+	gap: 16px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	@include pad {
+		gap: 8px;
+		padding-top: 16px;
+        padding-left: 16px;
+		padding-bottom: 20px;
+		justify-content: flex-start;
+    }
+}
+.works-item li {
+	color: #3B3B3B;
+	background: #F1F1F1;
+	padding: 10px 28px;
+	border-radius: 16px;
+	@include pad {
+		padding: 4px 12px;
+    }
+}
+.works-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 72px;
+    @include pad {
+		padding-top: 48px;
+    }
+}
+.works-pagination .pagination-button {
+    background-color: #FFFFFF;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+    color: #1E1E1E;
+	text-decoration: none;
+}
+.works-pagination .pagination-button.active {
+    background-color: #1E1E1E;
+    color: white;
+}
+.pagination-button:hover:not(.active) {
+    background-color: #F1F1F1;
+}
+.modal-body {
+    padding: 0;
+}
+.modal-header {
+    border-bottom: none;
+}
+.modal-info, .modal-description-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
+}
+.modal-info h3 {
+    font-size: 28px;
+    color: #3B3B3B;
+    line-height: 1.6;
+    @include pad {
+		padding-bottom: 8px;
+    }
+}
+.modal-info p {
+    font-size: 16px;
+    color: #919191;
+}
+.modal-info-box {
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    padding: 40px 56px;
+    @include pad {
+		grid-template-columns: 1fr;
+        padding: 20px 32px;
+    }
+}
+.info-description {
+    padding-right: 72px;
+    @include pad {
+		padding-right: 0;
+		padding-bottom: 24px;
+    }
+}
+.info-description p {
+    color: #1E1E1E;
+    line-height: 1.6;
+}
+.info-details {
+    padding-left: 24px;
+    border-left: 1px solid #C1C1C1;
+    @include pad {
+        padding-left: 0;
+		border-left: none;
+        border-top: 1px solid #C1C1C1;
+        text-align: center;
+    }
+}
+.info-details p {
+    line-height: 1.6;
+}
+.info-details h4 {
+    color: #5B5B5B;
+    line-height: 1.6;
+    padding-top: 24px;
+}
+.modal-description {
+    background-color: #FAFAFA;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    gap: 56px;
+}
+.modal-description-item img {
+    width: 80%;
+}
+.modal-description-item h3 {
+    font-size: 24px;
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+.modal-description-item p {
+    padding-left: 16px;
+    padding-right: 16px;
+}

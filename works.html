@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="test">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Noel's Works</title>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Noel's logo">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="#" class="active">作品集</a></li>
+                <li><a href="#">服務項目</a></li>
+                <li><a href="#">部落格</a></li>
+                <li><a href="#">聯絡我</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <label>
+                <img src="assets/logo.png" alt="Noel's logo" class="mobile-logo">
+                <img src="assets/hamburger.svg" alt="Mobile menu button" class="hamburger-icon">
+                <input type="checkbox" class="btn">
+            </label>
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="#" class="active">作品集</a></li>
+                <li><a href="#">服務項目</a></li>
+                <li><a href="#">部落格</a></li>
+                <li><a href="#">聯絡我</a></li>
+            </ul>
+        </div>
+    </header>
+    <body>
+        <section class="works-hero">
+            <div class="works-intro">
+                <img src="assets/quote-left.svg" alt="Quote left" class="quote-left">
+                <p>讓使用者在觀賞與使用的旅程中，發現<span class="highlight">設計的價值</span></p>
+                <p>而我在設計與開發的過程中，看見<span class="highlight">自己的價值</span></p>
+                <img src="assets/quote-right.svg" alt="Quote right" class="quote-right">
+            </div>
+            <div class="work-experience">
+                <div class="works-experience-card">
+                    <p class="subtitle">2B經驗</p>
+                    <p>內部監控系統、庫存系統、採購系統、行銷整合系統</p>
+                </div>
+                <div class="works-experience-card">
+                    <p class="subtitle">2C經驗</p>
+                    <p>跨國美妝保養電商、個人品牌網站、醫美網站、電子商務</p>
+                </div>
+            </div>
+        </section>
+        <section class="works-collection">
+            <div class="works-list">
+                <div class="works-item" data-bs-toggle="modal" data-bs-target="#workModal" style="cursor: pointer;">
+                    <img src="assets/work-image1.svg" alt="Work image">
+                    <h3>星際旅行訂票平台</h3>
+                    <p>悠遊宇宙的夢想，從這裡開始實現</p>
+                    <ul>
+                        <li>網頁設計</li>
+                        <li>響應式設計</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="works-item">
+                    <img src="assets/work-image2.svg" alt="Work image">
+                    <h3>理財 App</h3>
+                    <p>連動帳戶與行動支付，讓 AI 提供您最好的理財建議</p>
+                    <ul>
+                        <li>APP設計</li>
+                        <li>iOS</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div class="works-item">
+                    <img src="assets/work-image3.svg" alt="Work image">
+                    <h3>醫美診所官網</h3>
+                    <p>永保青春的秘密，從粹究開始</p>
+                    <ul>
+                        <li>網頁設計</li>
+                        <li>響應式設計</li>
+                        <li>WordPress</li>
+                    </ul>
+                </div>
+                <div class="works-item">
+                    <img src="assets/work-image4.svg" alt="Work image">
+                    <h3>美美美早餐店 POS 機 UI Design</h3>
+                    <p>訂單送單一目瞭然，自動報表分析好輕鬆</p>
+                    <ul>
+                        <li>UI 設計</li>
+                        <li>前端開發</li>
+                        <li>Wix</li>
+                    </ul>
+                </div>
+                <div class="works-item">
+                    <img src="assets/work-image5.svg" alt="Work image">
+                    <h3>電影院訂票系統</h3>
+                    <p>三步驟完成訂票，電腦手機都支援</p>
+                    <ul>
+                        <li>前端開發</li>
+                        <li>後端支援</li>
+                        <li>Vue</li>
+                    </ul>
+                </div>
+                <div class="works-item">
+                    <img src="assets/work-image6.svg" alt="Work image">
+                    <h3>巧克巧克形象官網設計</h3>
+                    <p>三步驟完成訂票，電腦手機都支援</p>
+                    <ul>
+                        <li>UI 設計</li>
+                        <li>設計系統</li>
+                        <li>網路電商</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="works-pagination">
+                <a href="#" class="pagination-button active">1</a>
+                <a href="#" class="pagination-button">2</a>
+                <a href="#" class="pagination-button">3</a>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <div class="footer-inner">
+                    <div class="footer-intro">
+            <img src="assets/logo.png" alt="Noel's logo">
+            <p>若有數位產品設計和開發相關問題</p>
+            <p>歡迎填寫表單，或直接與我聯絡！</p>
+            <address>
+                <a href="mailto:service@hexschool.com">service@hexschool.com</a>
+            </address>
+        </div>
+        <div class="footer-contact">
+            <a href="#" class="information-button active">
+                <div class="icon-wrapper">
+                    <img src="assets/list.svg" alt="List logo" class="icon-lg">
+                </div>
+                填寫表單
+            </a>
+            <a href="#" class="information-button">
+                <div class="icon-wrapper">
+                    <img src="assets/instagram.svg" alt="Instagram logo">
+                </div>
+                hexschool_demo
+            </a>
+            <a href="#" class="information-button">
+                <div class="icon-wrapper">
+                    <img src="assets/facebook.svg" alt="Facebook logo">
+                </div>
+                hexschoolTW
+            </a>
+        </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="workModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl mt-5">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <section class="modal-info">
+                        <h3>星際旅行訂票平台</h3>
+                        <p>悠遊宇宙的夢想，從這裡開始實現</p>
+                        <div class="modal-info-box">
+                            <div class="info-description">
+                                <p>STAR TRAVEL 為 KK 公司宇宙旅行的購票網站。</p>
+                                <p>主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。</p>
+                            </div>
+                            <div class="info-details">
+                                <p class="d-none d-md-block">設計原則：宇宙旅行、深色背景、強烈視覺效果</p>
+                                <p class="d-none d-md-block">開發方式：Bootstrap、Javascript、RWD</p>
+                                <h4 class="d-md-none">設計原則</h4>
+                                <p class="d-md-none">宇宙旅行、深色背景、強烈視覺效果</p>
+                                <h4 class="d-md-none">開發方式</h4>
+                                <p class="d-md-none">Bootstrap、Javascript、RWD</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="modal-description">
+                        <div class="modal-description-item">
+                            <img src="assets/modal-image1.svg" alt="Modal image1">
+                            <h3>主視覺</h3>
+                            <p>可直接設定日期、起迄星球、張數，快速查詢可購買的票券。</p>
+                        </div>
+                        <div class="modal-description-item">
+                            <img src="assets/modal-image2.svg" alt="Modal image2">
+                            <h3>推薦查詢</h3>
+                            <p>給予最快起飛，以及最熱門的景點推薦，協助使用者進行選擇。</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

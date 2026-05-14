@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="test">
+    <meta name="description" content="具有 10 年經驗的資深 UI 設計師兼前端工程師，專注於優化使用者的網頁體驗，提供平面設計、UI 設計、切版與前端開發服務。">
     <link rel="stylesheet" href="css/all.css">
-    <title>Document</title>
+    <title>Noel | UI 設計師 | 前端工程師</title>
 </head>
 <body>
     <header>
@@ -13,12 +13,27 @@
         <nav>
             <ul class="nav-list">
                 <li><a href="#" class="active">首頁</a></li>
-                <li><a href="#">作品集</a></li>
+                <li><a href="works.html">作品集</a></li>
                 <li><a href="#">服務項目</a></li>
                 <li><a href="#">部落格</a></li>
                 <li><a href="#">聯絡我</a></li>
             </ul>
         </nav>
+        <div class="mobile-menu">
+            <label>
+                <img src="assets/logo.png" alt="Noel's logo" class="mobile-size">
+                <img src="assets/hamburger.svg" alt="Mobile menu button"
+                class="hamburger-icon">
+                <input type="checkbox" class="btn">
+            </label> 
+            <ul class="mobile-nav-list">
+                <li><a href="#" class="active">首頁</a></li>
+                <li><a href="works.html">作品集</a></li>
+                <li><a href="#">服務項目</a></li>
+                <li><a href="#">部落格</a></li>
+                <li><a href="#">聯絡我</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <section class="hero">
@@ -29,9 +44,9 @@
                     <p class="subtitle">技術雙修並行，熱衷於優化使用者的網頁體驗</p>
                     <p class="specialties">WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN</p>
                     <ul>
-                        <li><img src="assets/instagram.svg" alt="Instagram"></li>
-                        <li><img src="assets/facebook.svg" alt="Facebook"></li>
-                        <li><img src="assets/youtube.svg" alt="Youtube"></li>
+                        <li><a href="https://www.instagram.com/"><img src="assets/instagram.svg" alt="Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/"><img src="assets/facebook.svg" alt="Facebook"></a></li>
+                        <li><a href="https://www.youtube.com/"><img src="assets/youtube.svg" alt="Youtube"></a></li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +59,7 @@
             <div class="portfolio">
                 <div class="portfolio-item-up">
                     <div class="portfolio-up-mobile-wrapper">
-                        <img src="assets/portfolio-up.jpg" alt="" class="portfolio-up-bg-mobile">
+                        <img src="assets/portfolio-up.jpg" alt="Portfolio up background for mobile" class="portfolio-up-bg-mobile">
                         <img src="assets/homepage-work-up.svg" alt="星際旅行訂票平台預覽圖" class="portfolio-up-img">
                     </div>
                     <img src="assets/homepage-work-up.svg" alt="星際旅行訂票平台預覽圖" class="portfolio-up-img-web">
@@ -62,8 +77,8 @@
                     </div>
                 </div>
                 <div class="portfolio-item-middle">
-                    <img src="/assets/homepage-work2-sm.svg" alt="" class="portfolio-middle-bg-mobile">
-                    <div class="grey-box">
+                    <img src="/assets/homepage-work2-sm.svg" alt="Portfolio middle background for mobile" class="portfolio-middle-bg-mobile">
+                    <div class="card-wrapper">
                         <div class="glass-card">
                             <section class="portfolio-content">
                                 <h3>理財APP</h3>
@@ -80,7 +95,7 @@
                 </div>
                 <div class="portfolio-item-down">
                     <div class="portfolio-down-mobile-wrapper">
-                        <img src="assets/portfolio-down.svg" alt="" class="portfolio-down-bg-mobile">
+                        <img src="assets/portfolio-down.svg" alt="Portfolio down background for mobile" class="portfolio-down-bg-mobile">
                         <img src="assets/homepage-work-down.svg" alt="醫美診所官網預覽圖"class="portfolio-down-img">
                     </div>
                     <img src="assets/homepage-work-down.svg" alt="醫美診所官網預覽圖" class="portfolio-down-img-web">
@@ -123,9 +138,11 @@
             <div class="articles-content">
                 <div class="article-card">
                     <img src="assets/article-image1.svg" alt="Article image1">
-                    <p>
-                        Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)
-                    </p>
+                    <a href="#">
+                        <p>
+                            Vision Pro 登場！Vision Pro UI/UX 設計重點大公開 (上)
+                        </p>
+                    </a>
                     <div class="article-meta">
                         <div class="label">UI/UX 新知</div>
                         <time class="date" datetime="2024-02-10">2024/02/10</time>
@@ -133,9 +150,11 @@
                 </div>
                 <div class="article-card">
                     <img src="assets/article-image2.svg" alt="Article image2">
-                    <p>
-                        給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)
-                    </p>
+                    <a href="#">
+                        <p>
+                            給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (下)
+                        </p>
+                    </a>
                     <div class="article-meta">
                         <div class="label">UI/UX 新知</div>
                         <time class="date" datetime="2023-11-20">2023/11/20</time>
@@ -143,9 +162,11 @@
                 </div>
                 <div class="article-card">
                     <img src="assets/article-image3.svg" alt="Article image3">
-                    <p>
-                        給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)
-                    </p>
+                    <a href="#">
+                        <p>
+                            給設計師和工程師的 Figma-Dev Mode 開發模式使用指南 (上)
+                        </p>
+                    </a>
                     <div class="article-meta">
                         <div class="label">UI/UX 新知</div>
                         <time class="date" datetime="2023-10-18">2023/10/18</time>
@@ -163,7 +184,8 @@
         </section>
     </main>
     <footer>
-        <div class="footer-intro">
+        <div class="footer-inner">
+                    <div class="footer-intro">
             <img src="assets/logo.png" alt="Noel's logo">
             <p>若有數位產品設計和開發相關問題</p>
             <p>歡迎填寫表單，或直接與我聯絡！</p>
@@ -190,6 +212,7 @@
                 </div>
                 hexschoolTW
             </a>
+        </div>
         </div>
     </footer>
 </body>
