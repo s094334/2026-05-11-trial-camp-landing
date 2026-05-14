@@ -149,15 +149,14 @@ body {
 
 /* header */
 header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 32px 312px;
 }
 @media (max-width: 768px) {
   header {
     padding: 0;
-    position: relative;
   }
 }
 
@@ -200,11 +199,11 @@ header img, footer img {
     align-items: center;
     padding: 10px 20px;
   }
-  .mobile-menu label img:first-child {
+  .mobile-menu label .mobile-logo {
     width: 90px;
     height: 40px;
   }
-  .mobile-menu label img {
+  .mobile-menu label .hamburger-icon {
     width: 30px;
     height: 20px;
   }
@@ -916,6 +915,7 @@ footer {
 @media (max-width: 768px) {
   .works-intro p {
     font-size: 20px;
+    line-height: 1.6;
   }
 }
 
@@ -945,16 +945,14 @@ footer {
 @media (max-width: 768px) {
   .quote-right {
     display: none;
-    width: 64px;
-    height: 64px;
   }
 }
 
 .works-intro .highlight {
   background-image: url("../assets/Vector.png");
   background-repeat: no-repeat;
-  background-position: center bottom; /* 圖片位置在中央底部 */
-  background-size: 100% auto; /* 橫向撐滿文字寬度 */
+  background-position: center bottom;
+  background-size: 100% auto;
   padding-bottom: 4px;
 }
 
@@ -975,20 +973,21 @@ footer {
 .works-experience-card p {
   color: #3B3B3B;
   font-size: 16px;
-  flex: 1;
   line-height: 24px;
   text-align: center;
 }
 
 .works-experience-card .subtitle {
   color: #5B5B5B;
-  font-size: 16px;
-  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .works-experience-card .subtitle::after {
   content: "";
-  flex: 0 0 100px;
+  display: block;
+  width: 24px;
   height: 1px;
   background: #C1C1C1;
 }
@@ -1003,19 +1002,15 @@ footer {
 }
 
 .works-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
 }
 @media (max-width: 768px) {
   .works-list {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 48px;
   }
-}
-
-.works-item {
-  flex: 0 0 calc(50% - 12px);
 }
 
 .works-item img {
@@ -1049,6 +1044,7 @@ footer {
 }
 
 .works-item ul {
+  font-size: 16px;
   display: flex;
   gap: 16px;
   padding-top: 24px;
@@ -1056,7 +1052,6 @@ footer {
 }
 @media (max-width: 768px) {
   .works-item ul {
-    font-size: 16px;
     gap: 8px;
     padding-top: 16px;
     padding-left: 16px;
@@ -1073,9 +1068,6 @@ footer {
 }
 @media (max-width: 768px) {
   .works-item li {
-    color: #3B3B3B;
-    background: #F1F1F1;
-    gap: 8px;
     padding: 4px 12px;
   }
 }
@@ -1107,4 +1099,8 @@ footer {
 .works-pagination .pagination-button.active {
   background-color: #1E1E1E;
   color: white;
+}
+
+.pagination-button:hover:not(.active) {
+  background-color: #F1F1F1;
 }/*# sourceMappingURL=all.css.map */

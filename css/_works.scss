@@ -34,6 +34,7 @@
 	text-align: center;
     @include pad {
 		font-size: 20px;
+        line-height: 1.6;
     }
 }
 .quote-left {
@@ -57,15 +58,13 @@
     right: 0;
     @include pad {
 		display: none;
-        width: 64px;
-        height: 64px;
     }
 }
 .works-intro .highlight {
     background-image: url('../assets/Vector.png');
 	background-repeat: no-repeat;
-	background-position: center bottom; /* 圖片位置在中央底部 */
-  	background-size: 100% auto; /* 橫向撐滿文字寬度 */
+	background-position: center bottom;
+    background-size: 100% auto;
     padding-bottom: 4px;
 }
 .work-experience {
@@ -82,18 +81,19 @@
 .works-experience-card p {
     color: #3B3B3B;
     font-size: 16px;
-    flex: 1;
     line-height: 24px;
     text-align: center;
 }
 .works-experience-card .subtitle {
     color: #5B5B5B;
-    font-size: 16px;
-    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .works-experience-card .subtitle::after {
     content: '';
-    flex: 0 0 100px;
+    display: block;
+    width: 24px;
     height: 1px;
     background: #C1C1C1;
 }
@@ -104,16 +104,13 @@
     }
 }
 .works-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
     @include pad {
-		flex-direction: column;
+		grid-template-columns: 1fr;
         gap: 48px;
     }
-}
-.works-item {
-    flex: 0 0 calc(50% - 12px);
 }
 .works-item img {
     width: 100%;
@@ -139,12 +136,12 @@
     }
 }
 .works-item ul {
+    font-size: 16px;
 	display: flex;
 	gap: 16px;
 	padding-top: 24px;
 	padding-bottom: 24px;
 	@include pad {
-		font-size: 16px;
 		gap: 8px;
 		padding-top: 16px;
         padding-left: 16px;
@@ -158,9 +155,6 @@
 	padding: 10px 28px;
 	border-radius: 16px;
 	@include pad {
-		color: #3B3B3B;
-		background: #F1F1F1;
-		gap: 8px;
 		padding: 4px 12px;
     }
 }
@@ -187,4 +181,7 @@
 .works-pagination .pagination-button.active {
     background-color: #1E1E1E;
     color: white;
+}
+.pagination-button:hover:not(.active) {
+    background-color: #F1F1F1;
 }

@@ -8,13 +8,12 @@ body {
 }
 /* header */
 header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 32px 312px;
 	@include pad {
         padding: 0;
-        position: relative;
     }
 }
 header img, footer img {
@@ -46,15 +45,9 @@ header img, footer img {
 			justify-content: space-between;
 			align-items: center;
 			padding: 10px 20px;
-			img:first-child {
-				width: 90px;
-				height: 40px;
-			}
         }
-		label img {
-			width: 30px;
-			height: 20px;
-		}
+		label .mobile-logo { width: 90px; height: 40px; }
+		label .hamburger-icon { width: 30px; height: 20px; }
         .mobile-nav-list {
             overflow: hidden;
             max-height: 0;
