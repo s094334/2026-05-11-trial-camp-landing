@@ -1,3 +1,4 @@
+@use "mixin" as *;
 footer {
 	width: 100%;
     background: url('../assets/footer-lg.png') center/cover no-repeat;
@@ -72,7 +73,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	overflow: hidden; /* 防止 img 溢出 */
+	overflow: hidden;
 }
 .icon-lg {
 	width: 100%;
