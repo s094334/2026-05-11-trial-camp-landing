@@ -17,17 +17,6 @@ header {
         position: relative;
     }
 }
-@include pad {
-	header ::after{
-        content: '';
-        position: absolute;
-        top: 10px;
-        right: 0;
-        width: 40px;
-		height: 40px;
-        background: url('../assets/hamburger.svg') no-repeat;
-	}
-}
 header img, footer img {
     width: 90px;
     height: 40px;
@@ -38,6 +27,59 @@ header img, footer img {
 	gap: 40px;
 	@include pad {
         display: none;
+    }
+}
+.mobile-menu {
+    display: none;
+    @include pad {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: #fff;
+        input { display: none; }
+        label {
+            cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 20px;
+			img:first-child {
+				width: 90px;
+				height: 40px;
+			}
+        }
+		label img {
+			width: 30px;
+			height: 20px;
+		}
+        .mobile-nav-list {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .5s;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 0;
+            padding: 0;
+            a {
+                display: block;
+                padding: 14px 20px;
+				text-decoration: none;
+				color: #000000;
+				font-size: 20px;
+				text-align: center;
+            }
+			a.active {
+				font-weight: bold;
+			}
+        }
+        &:has(input:checked) .mobile-nav-list {
+            max-height: 50%;
+            transition: max-height 1s;
+            overflow-y: auto; 
+        }
     }
 }
 .nav-list a {
@@ -72,6 +114,7 @@ header img, footer img {
 	width: 60%;
 	@include pad {
         width: 100%;
+		margin-top: 40px;
     }
 }
 h1 {
