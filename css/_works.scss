@@ -29,9 +29,10 @@
         padding-top: 64px;
     }
 }
-.works-intro p {
+.works-intro p, .works-intro h1 {
     font-size: 24px;
 	text-align: center;
+    font-weight: normal;
     @include pad {
 		font-size: 20px;
         line-height: 1.6;
